@@ -1,23 +1,16 @@
 ---
-layout: presentation
+my_title : Home
 ---
 
-		<div class="reveal">
-			<div class="slides">
-				<section>
-				{% assign sitePosts = site.posts | reverse | sort:date %}
-				{% assign prevYear = sitePosts[0].date | date: "%Y" %}
+<!doctype html>
 
-				{% for post in sitePosts %}
-					{% assign postYear = post.date | date: "%Y" %}
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>{{ page.my_title }}</title>
+	</head>
 
-					{% if prevYear != postYear %}
-						{% assign prevYear = postYear %}
-						</section><section>
-					{% endif %}
-
-					<section>{{ post.content }}</section>
-				{% endfor %}
-			</div>
-		</div>
-
+	<body>
+		<h1>Hello World!</h1>
+	</body>
+</html>
